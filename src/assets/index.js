@@ -38,6 +38,7 @@ import nwg from "../assets/company/nwg.png";
 import freelancer from "../assets/company/freelancer.png";
 import womendashboard from "../assets/womendashboard.png"
 import royalproperty from "../assets/royalproperty.png"
+import Bankless1 from "../assets/Bankless1.png"
 
 export {
   logo,
@@ -77,4 +78,5 @@ export {
   freelancer,
   womendashboard,
   royalproperty,
+  Bankless1
 };

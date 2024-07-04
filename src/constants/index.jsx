@@ -25,6 +25,7 @@ import {
   freelancer,
   womendashboard,
   royalproperty,
+  Bankless1
 } from "../assets";
 
 export const navLinks = [
@@ -238,25 +239,25 @@ const projects = [
     source_code_link: "https://github.com/Arshadansa/Royal_Properties",
   },
   {
-    name: "Trip Guide",
+    name: "Bankless",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "nodejs",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: Bankless1,
+    source_code_link: "https://github.com/Arshadansa/Claimable.git",
   },
 ];
 
