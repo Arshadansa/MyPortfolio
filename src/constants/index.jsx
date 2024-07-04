@@ -103,10 +103,10 @@ const technologies = [
     name: "API's",
     icon: api,
   },
-  {
-    name: "WebSocket",
-    icon: Websocket,
-  },
+  // {
+  //   name: "WebSocket",
+  //   icon: Websocket,
+  // },
   {
     name: "git",
     icon: git,
@@ -115,10 +115,10 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "FamerMotion",
-    icon: Farmermotion,
-  },
+  // {
+  //   name: "FamerMotion",
+  //   icon: Farmermotion,
+  // },
   {
     name: "Gsap",
     icon: Gsap1,
