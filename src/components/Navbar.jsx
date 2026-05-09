@@ -25,10 +25,10 @@ const Navbar = () => {
           <p className=" text-white  text-[18px] flex gap-2 font-bold cursor-pointer">
             {" "}
             Arshad Ansari
-             <span className=" sm:block hidden">| Mern Stack</span>
+            <span className=" sm:block hidden">| Mern Stack</span>
           </p>
         </Link>
-        <ul className=" list-none  hidden sm:flex flex-row gap-10">
+        <ul className=" list-none hidden sm:flex flex-row gap-10 items-center">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -37,11 +37,19 @@ const Navbar = () => {
               }}
               className={`${
                 active === link.title ? " text-white" : " text-secondary"
-              } hover:text-white text-[18px] font-medium  cursor-pointer`}
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+
+          <a
+            href="/resume.pdf"
+            download
+            className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
+          >
+            Download Resume
+          </a>
         </ul>
 
         <div className=" sm:hidden flex flex-1  justify-end  items-center">
@@ -56,21 +64,28 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6  black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className=" list-none flex flex-col justify-end  items-start gap-4 ">
+            <ul className=" list-none sm:hidden flex-row gap-10 items-center">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   onClick={() => {
                     setActive(link.title);
-                    setToggle(!toggle)
                   }}
                   className={`${
                     active === link.title ? " text-white" : " text-secondary"
-                  } hover:text-white text-[16px] font-poppins font-medium  cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer`}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+
+              <a
+                href="/resume.pdf"
+                download
+                className="md:bg-white text-secondary hover:cursor-pointer md:text-black md:px-4 md:py-2 rounded-lg font-semibold md:hover:bg-gray-200 transition"
+              >
+                Download Resume
+              </a>
             </ul>
           </div>
         </div>
