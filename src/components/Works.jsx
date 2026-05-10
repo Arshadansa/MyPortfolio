@@ -23,9 +23,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary border  p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full  h-[200px]">
+        <div className="relative w-full border rounded-xl  border-gray-400  h-[200px]">
           <img
             src={image}
             alt={name}
@@ -46,7 +46,9 @@ const ProjectCard = ({
         </div>
         <div className="mt-5 ">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-justify text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-justify text-[14px]">
+            {description}
+          </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2 ">
           {tags.map((tag) => (
@@ -79,9 +81,9 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7 ">
+      <div className="mt-20  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={project.name} index={index} {...project} />
         ))}
       </div>
     </>

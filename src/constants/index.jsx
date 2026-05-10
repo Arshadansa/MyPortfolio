@@ -25,7 +25,11 @@ import {
   freelancer,
   womendashboard,
   royalproperty,
-  Bankless1
+  Bankless1,
+  alilagemsandjewellery,
+  Fyt,
+  gift,
+  StudentHq,
 } from "../assets";
 
 export const navLinks = [
@@ -41,7 +45,6 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  
 ];
 
 const services = [
@@ -54,12 +57,12 @@ const services = [
     icon: backend,
   },
   {
-    title: "Figma Design",
-    icon: figma,
-  },
-  {
     title: "Java Developer",
     icon: creator,
+  },
+  {
+    title: "Figma Design",
+    icon: figma,
   },
 ];
 
@@ -128,11 +131,26 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full Stack Developer",
+    company_name: "FlyYourTech",
+    icon: Fyt,
+    iconBg: "Black",
+    date: "Jan 2025 – Present | Remote",
+    points: [
+      "Led development of 12+ production-grade web applications using React.js and Node.js.",
+      "Designed scalable frontend architecture and reusable component systems.",
+      "Built and integrated secure APIs, authentication flows, and performance-optimized interfaces.",
+      "Deployed and maintained cloud-hosted applications across AWS, Vercel, and Netlify.",
+      "Contributed to technical decisions, code quality, and scalable solution design.",
+      "Worked on live projects including Mysweetwishes.com, Flyyourtech.com, StudentHQ, Shadesofgreenme.com, and Vetoshealth.ai.",
+    ],
+  },
+  {
     title: "Frontend Developer",
     company_name: "Molog",
     icon: Molog,
     iconBg: "#E6DEDf",
-    date: "May 2023 ‑ May 2024 · 1 Year | In‑office",
+    date: "May 2023 ‑ Dec 2024 - 1.7 Year | In‑office",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Integrated third-party APIs and WebSocket to enhance the app's functionality and user experience.",
@@ -145,7 +163,7 @@ const experiences = [
     company_name: "NextWebGuru",
     icon: nwg,
     iconBg: "#E6DEDD",
-    date: "April 2023 | 45-days Internship",
+    date: "April 2023 | 45-days Internship | Remote",
     points: [
       "Completed a 45-day internship at NWG, developing a robust e-commerce website",
       "Leveraged Next.js for efficient server-side rendering and dynamic routing.",
@@ -198,6 +216,107 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Fly Your Tech",
+    description:
+      "Fly Your Tech is a premium digital solutions company focused on transforming complex business challenges into seamless digital experiences through innovative engineering, scalable technologies, and strategic design.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "yellow",
+      },
+    ],
+    image: Fyt,
+    source_code_link: "https://github.com/Arshadansa/flyyourtech",
+  },
+  {
+    name: "mysweetwishes.com",
+
+    description:
+      "An online platform for premium wall art, decorative frames, personalized photo frames, and modern home decor collections in India.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "yellow",
+      },
+    ],
+    image: gift,
+    source_code_link: "https://github.com/Arshadansa/gift/tree/master",
+  },
+  {
+    name: "Student HQ",
+    description:
+      "A modern student guidance platform that helps students seamlessly navigate the college admissions process, explore educational opportunities, and achieve their academic and career goals with confidence.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "yellow",
+      },
+    ],
+    image: StudentHq,
+    source_code_link: "https://github.com/Arshadansa/Student_hq",
+  },
+  {
+    name: "alila-gems-and-jewellery",
+    description:
+      "Manufacturer of all types of precious and semi precious stones ,silver and gold jeweler all types of rough and minerals.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "yellow",
+      },
+    ],
+    image: alilagemsandjewellery,
+    source_code_link: "https://github.com/Arshadansa/alila-gems-and-jewellery",
+  },
+  {
     name: "Women Safety System",
     description:
       "Developed an automated web and mobile app that detects potential danger and sends an SOS signal to the nearest police station dashboard. Data includes live location, front and back camera images, 30‑second audio recording, device speed, battery status, and date/time of activation.",
@@ -216,7 +335,7 @@ const projects = [
       },
     ],
     image: womendashboard,
-    source_code_link: "https://github.com/Arshadansa/KAVACH-FINAL",
+    source_code_link: "https://github.com/Arshadansa/Women-kavach",
   },
   {
     name: "Royal Properties",

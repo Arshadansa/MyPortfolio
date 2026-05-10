@@ -39,15 +39,22 @@ import freelancer from "../assets/company/freelancer.png";
 import womendashboard from "../assets/womendashboard.png"
 import royalproperty from "../assets/royalproperty.png"
 import Bankless1 from "../assets/Bankless1.png"
+import alilagemsandjewellery from "../assets/alilagemsandjewellery.png"
+import Fyt from "../assets/Fyt.png"
+import StudentHq from "../assets/StudentHq.png"
+import gift from "../assets/gift.png"
 
 export {
   logo,
+  gift,
   backend,
   creator,
   mobile,
   web,
+  StudentHq,
   github,
   menu,
+  Fyt,
   close,
   nwg,
   css,
@@ -78,5 +85,6 @@ export {
   freelancer,
   womendashboard,
   royalproperty,
-  Bankless1
+  Bankless1,
+  alilagemsandjewellery
 };
