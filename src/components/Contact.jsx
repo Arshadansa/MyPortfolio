@@ -91,7 +91,50 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <div>
+      {/* Social Links */}
+<div className="mt-10 flex flex-row gap-4 text-secondary">
+  <p className="text-white font-medium text-lg">Connect with me</p>
+
+  {/* LinkedIn */}
+  <motion.a
+    whileHover={{ scale: 1.05 }}
+    href="https://www.linkedin.com/in/arshad4475/"
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-3 hover:text-white transition"
+  >
+    <span className="text-blue-400 text-xl">in</span>
+    LinkedIn
+  </motion.a>
+
+  {/* GitHub */}
+  <motion.a
+    whileHover={{ scale: 1.05 }}
+    href="https://github.com//Arshadansa"
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-3 hover:text-white transition"
+  >
+    <span className="text-white text-xl">🐙</span>
+    GitHub
+  </motion.a>
+
+  {/* Email */}
+  <motion.a
+    whileHover={{ scale: 1.05 }}
+    href="mailto:arshadans10@gmail.com"
+    className="flex items-center gap-3 hover:text-white transition"
+  >
+    <span className="text-red-400 text-xl">✉️</span>
+    Email
+  </motion.a>
+</div>
+    </div>
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      
+      
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -159,6 +202,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
+    </>
   );
 };
 
