@@ -1,7 +1,7 @@
-import React from "react";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -9,27 +9,58 @@ import { slideIn } from "../utils/motion";
 
 const Contact = () => {
   const formRef = useRef();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
 
-  //template id--
-  //services id --
-  /// public key --
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+
+  // ✅ Validation function
+  const validateForm = () => {
+    if (!form.name.trim()) {
+      alert("Name is required");
+      return false;
+    }
+
+    if (!form.email.trim()) {
+      alert("Email is required");
+      return false;
+    }
+
+    // simple email regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      alert("Please enter a valid email");
+      return false;
+    }
+
+    if (!form.message.trim()) {
+      alert("Message cannot be empty");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // ❌ stop if validation fails
+    if (!validateForm()) return;
+
     setLoading(true);
 
     emailjs
       .send(
-        "service_z3vam89",
+        "service_zlkw1iw",
         "template_y2skr0s",
         {
           from_name: form.name,
@@ -38,12 +69,12 @@ const Contact = () => {
           to_email: "arshadans10@gmail.com",
           message: form.message,
         },
-        "ZwenNRrR1ECLRCoB8"
+        "G958GEEbojnacpbvO"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Thank you. I will get back to you soon.");
 
           setForm({
             name: "",
@@ -54,8 +85,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please try again.");
         }
       );
   };
@@ -74,47 +104,54 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
-          <label className="flex flex-col ">
+          <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
               name="name"
               value={form.name}
+              // required={true}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
             />
           </label>
-          <label className="flex flex-col ">
+
+          <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
               name="email"
+                  // required={true}
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
             />
           </label>
-          <label className="flex flex-col ">
+
+          <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows="7"
               name="message"
+                  // required={true}
               value={form.message}
               onChange={handleChange}
-              placeholder="What do you want say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder="What do you want to say?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
             />
           </label>
+
           <button
-            className="bg-teritiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
             type="submit"
           >
-            {loading ? "Sending.." : "Send"}
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
+
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"

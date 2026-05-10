@@ -40,13 +40,16 @@ import womendashboard from "../assets/womendashboard.png"
 import royalproperty from "../assets/royalproperty.png"
 import Bankless1 from "../assets/Bankless1.png"
 import alilagemsandjewellery from "../assets/alilagemsandjewellery.png"
-import Fyt from "../assets/Fyt.png"
+import FytImage from "../assets/FytImage.png"
 import StudentHq from "../assets/StudentHq.png"
 import gift from "../assets/gift.png"
+import youtube from "../assets/youtube.png"
+import FytIcon from "../assets/company/Fyt.avif"
 
 export {
   logo,
   gift,
+  youtube,
   backend,
   creator,
   mobile,
@@ -54,7 +57,7 @@ export {
   StudentHq,
   github,
   menu,
-  Fyt,
+  FytImage,
   close,
   nwg,
   css,
@@ -84,6 +87,7 @@ export {
   Molog,
   freelancer,
   womendashboard,
+  FytIcon,
   royalproperty,
   Bankless1,
   alilagemsandjewellery

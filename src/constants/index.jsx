@@ -27,10 +27,13 @@ import {
   royalproperty,
   Bankless1,
   alilagemsandjewellery,
-  Fyt,
+  FytIcon,
+  FytImage,
   gift,
   StudentHq,
+  youtube,
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -133,7 +136,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "FlyYourTech",
-    icon: Fyt,
+    icon: FytIcon,
     iconBg: "Black",
     date: "Jan 2025 – Present | Remote",
     points: [
@@ -237,7 +240,7 @@ const projects = [
         color: "yellow",
       },
     ],
-    image: Fyt,
+    image: FytImage,
     source_code_link: "https://github.com/Arshadansa/flyyourtech",
   },
   {
@@ -290,6 +293,31 @@ const projects = [
     ],
     image: StudentHq,
     source_code_link: "https://github.com/Arshadansa/Student_hq",
+  },
+  {
+    name: "Youtube_Clone",
+    description:
+      "A production-grade YouTube-style video sharing platform built using React, Tailwind CSS, Context API, and React Router. It includes full authentication, video upload, playlist management, user dashboards, and interactive UI features for a smooth video streaming experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "yellow",
+      },
+    ],
+    image: youtube,
+    source_code_link: "https://github.com/Arshadansa/youtube_clone_frontend",
   },
   {
     name: "alila-gems-and-jewellery",
