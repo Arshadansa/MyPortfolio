@@ -94,7 +94,7 @@ const Contact = () => {
     <>
     <div>
       {/* Social Links */}
-<div className="mt-10 flex flex-row gap-4 text-secondary">
+<div className="mt-10 flex flex-row flex-wrap gap-4 text-secondary">
   <p className="text-white font-medium text-lg">Connect with me</p>
 
   {/* LinkedIn */}
