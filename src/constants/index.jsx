@@ -29,11 +29,11 @@ import {
   alilagemsandjewellery,
   FytIcon,
   FytImage,
+  SpeakNest,
   gift,
   StudentHq,
   youtube,
 } from "../assets";
-
 
 export const navLinks = [
   {
@@ -242,6 +242,32 @@ const projects = [
     ],
     image: FytImage,
     source_code_link: "https://github.com/Arshadansa/flyyourtech",
+  },
+  {
+    name: "SpeakNest",
+    description:
+      "SpeakNest is a real-time language learning platform designed to help users improve their speaking skills by interacting with others through live video conversations and chat.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "yellow",
+      },
+    ],
+    image: SpeakNest,
+    source_code_link:
+      "https://github.com/Arshadansa/Video-Calling-App---SpeakNest---Mern-Stack---frontend",
   },
   {
     name: "mysweetwishes.com",

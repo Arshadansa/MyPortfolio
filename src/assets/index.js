@@ -45,7 +45,7 @@ import StudentHq from "../assets/StudentHq.png"
 import gift from "../assets/gift.png"
 import youtube from "../assets/youtube.png"
 import FytIcon from "../assets/company/Fyt.avif"
-
+import SpeakNest from "../assets/SpeakNest.png"
 export {
   logo,
   gift,
@@ -60,6 +60,7 @@ export {
   FytImage,
   close,
   nwg,
+  SpeakNest,
   css,
   docker,
   figma,
